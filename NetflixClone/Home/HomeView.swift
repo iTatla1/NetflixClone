@@ -19,6 +19,10 @@ struct HomeView: View {
                 
                 // Main VStack
                 LazyVStack {
+                    TopMoviePreview(movie: exampleMovie1)
+                        .frame(width: .infinity)
+                        .padding(.top, -110)
+                    
                     ForEach(vm.allCategories, id: \.self) { category in
                         VStack {
                             HStack {

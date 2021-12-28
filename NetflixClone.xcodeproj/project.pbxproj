@@ -18,6 +18,7 @@
 		B6176D67277B58260047848B /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176D66277B58260047848B /* HomeVM.swift */; };
 		B6176D69277B62A60047848B /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176D68277B62A60047848B /* TopMoviePreview.swift */; };
 		B6176D6C277B67A80047848B /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176D6B277B67A80047848B /* SmallVerticalButton.swift */; };
+		B6176D6E277B6F1B0047848B /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176D6D277B6F1B0047848B /* WhiteButton.swift */; };
 		E19040D844ECFE7A79423566 /* Pods_NetflixClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096B94148C0572E11DB25A65 /* Pods_NetflixClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		B6176D66277B58260047848B /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		B6176D68277B62A60047848B /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		B6176D6B277B67A80047848B /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
+		B6176D6D277B6F1B0047848B /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B6176D6B277B67A80047848B /* SmallVerticalButton.swift */,
+				B6176D6D277B6F1B0047848B /* WhiteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6176D65277B55510047848B /* GlobalHelpers.swift in Sources */,
+				B6176D6E277B6F1B0047848B /* WhiteButton.swift in Sources */,
 				B6176D5C277B3CE70047848B /* HomeView.swift in Sources */,
 				B6176D67277B58260047848B /* HomeVM.swift in Sources */,
 				B6176D4F277B3A310047848B /* ContentView.swift in Sources */,

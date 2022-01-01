@@ -11,6 +11,13 @@ struct MovieDetails: View {
     let movie: Movie
     let screen = UIScreen.main.bounds
     
+    @State private var showSeasonPicker = false
+    @State private var selectedSeason = 1
+    
+    func getEpisodesForSeason() -> [Episode] {
+        return movie.episode?.filter {$0.season == selectedSeason} ?? []
+    }
+    
     var body: some View {
         ZStack {
             Color.black

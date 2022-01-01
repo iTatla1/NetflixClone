@@ -27,7 +27,20 @@ let exampleTrailers = [exampleTrailer1,exampleTrailer2,exampleTrailer3]
 
 
 let categories = ["Dystopium", "Exciting", "Suspensefull", "Sci-FI"]
+
 let currentEpisodeInoExample1 = CurrentEpisodeInfo(episodeName: "Beginnings and Endings", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", season: 1, episode: 1)
+
+let episode1 = Episode(episodeNumber: 1, name: "Beginning & Ending", season: 1, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+let episode2 = Episode(episodeNumber: 2, name: "Dark Matter", season: 1, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+let episode3 = Episode(episodeNumber: 3, name: "Ghosts", season: 1, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+
+let episode4 = Episode(episodeNumber: 1, name: "Beginning & Ending", season: 2, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+let episode5 = Episode(episodeNumber: 2, name: "Dark Matter", season: 2, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+let episode6 = Episode(episodeNumber: 1, name: "Ghosts", season: 3, thumbnailImageURLString: randomExampleImageURL.absoluteString, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum aliquam tortor quis suscipit..", length: 12, videoURL: exampleVideoURL)
+
+let exampleEpisodes = [episode1,episode2,episode3,episode4,episode5,episode6].shuffled()
+
+
 let exampleMovie1 = Movie(id: UUID().uuidString, name: "DARK", thumbnailURL: URL(string: "https://picsum.photos/200/300")!, categories: categories, year: 2020, rating: "TV-MA", quality: "HD", numberOfSeasons: 1, defaultEpisodeInfo: currentEpisodeInoExample1, creators: "Netflix, IFlix", cast: "Brad Pitt, Angalina Julie, Ben Afflick, Leonardo Di Caprio, Rock, Brad Smith", moreLikeThisMovie: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6, exampleMovie7].shuffled(), trailers: exampleTrailers)
 
 let exampleMovie2 = Movie(id: UUID().uuidString, name: "Travellers", thumbnailURL: URL(string: "https://picsum.photos/200/300/")!, categories: categories, year: 2020, rating: "TV-MA", quality: "3D", numberOfSeasons: 2, promotionHeadLine: "New Episodes Coming Soon", defaultEpisodeInfo: currentEpisodeInoExample1, creators: "Netflix, IFlix", cast: "Brad Pitt, Angalina Julie, Ben Afflick, Leonardo Di Caprio, Rock, Brad Smith", moreLikeThisMovie: [], trailers: exampleTrailers)

@@ -33,6 +33,8 @@ struct Movie: Identifiable {
     
     var moreLikeThisMovie: [Movie]
     
+    var trailers: [Trailer]
+    
     var numOfSeasonsDispaly: String {
         if let num = numberOfSeasons {
             if num == 1 {

@@ -11,6 +11,7 @@ struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTab = .episodes
     
     var tabs: [CustomTab]
+    var movie: Movie
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,7 +25,7 @@ struct CustomTabSwitcher: View {
             case .trailers:
                 Text("Trailers")
             case .more:
-                Text("More")
+                MoreLikeView(movies: movie.moreLikeThisMovie)
             }
         }
         .foregroundColor(.white)
@@ -43,7 +44,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
+            CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
         }
     }
 }

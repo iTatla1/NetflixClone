@@ -52,7 +52,7 @@ struct MovieDetails: View {
                         
                         MovieActionButtons()
                         
-                        CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
+                        CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie4)
                         
                     }
                     .padding(.horizontal, 10)

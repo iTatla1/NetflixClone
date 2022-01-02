@@ -18,7 +18,6 @@ struct VideoPreviewImage: View {
             KFImage(imageURL)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .clipped()
                 
             Button {
                 showingVideoPlayer = true

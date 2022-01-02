@@ -13,9 +13,9 @@ struct TrailersMoreView: View {
     var body: some View {
             VStack {
                 ForEach(trailers) { trailer in
-                    LazyVStack (alignment: .leading) {
+                    VStack (alignment: .leading) {
                         VideoPreviewImage(imageURL: trailer.thumbnailImageURL, videoURL: trailer.videoURL)
-                            .frame(maxWidth: screen.width, maxHeight: 250 )
+                            .frame(width: screen.size.width, height: 250)
                             .clipped()
                         
                         Text(trailer.name)

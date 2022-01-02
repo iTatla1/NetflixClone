@@ -17,9 +17,9 @@ var randomExampleImageURL: URL {
     [exampleImageURL,exampleImageURL1,exampleImageURL2].randomElement() ?? exampleImageURL
 }
 
-let exampleTrailer1 = Trailer(name: "Season1 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
-let exampleTrailer2 = Trailer(name: "Season2 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
-let exampleTrailer3 = Trailer(name: "Season3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
+let exampleTrailer1 = Trailer(name: "Season1 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL)
+let exampleTrailer2 = Trailer(name: "Season2 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL1)
+let exampleTrailer3 = Trailer(name: "Season3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL2)
 
 let exampleTrailers = [exampleTrailer1,exampleTrailer2,exampleTrailer3]
 
@@ -41,7 +41,7 @@ let episode6 = Episode(episodeNumber: 1, name: "Ghosts", season: 3, thumbnailIma
 let exampleEpisodes = [episode1,episode2,episode3,episode4,episode5,episode6].shuffled()
 
 
-let exampleMovie1 = Movie(id: UUID().uuidString, name: "DARK", thumbnailURL: URL(string: "https://picsum.photos/200/300")!, categories: categories, year: 2020, rating: "TV-MA", quality: "HD", numberOfSeasons: 1, defaultEpisodeInfo: currentEpisodeInoExample1, creators: "Netflix, IFlix", cast: "Brad Pitt, Angalina Julie, Ben Afflick, Leonardo Di Caprio, Rock, Brad Smith", moreLikeThisMovie: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6, exampleMovie7].shuffled(), trailers: exampleTrailers)
+let exampleMovie1 = Movie(id: UUID().uuidString, name: "DARK", thumbnailURL: URL(string: "https://picsum.photos/200/300")!, categories: categories, year: 2020, rating: "TV-MA", quality: "HD", numberOfSeasons: 2, episode: exampleEpisodes, defaultEpisodeInfo: currentEpisodeInoExample1, creators: "Netflix, IFlix", cast: "Brad Pitt, Angalina Julie, Ben Afflick, Leonardo Di Caprio, Rock, Brad Smith", moreLikeThisMovie: [exampleMovie2,exampleMovie3,exampleMovie4], trailers: [exampleTrailer1])
 
 let exampleMovie2 = Movie(id: UUID().uuidString, name: "Travellers", thumbnailURL: URL(string: "https://picsum.photos/200/300/")!, categories: categories, year: 2020, rating: "TV-MA", quality: "3D", numberOfSeasons: 2, promotionHeadLine: "New Episodes Coming Soon", defaultEpisodeInfo: currentEpisodeInoExample1, creators: "Netflix, IFlix", cast: "Brad Pitt, Angalina Julie, Ben Afflick, Leonardo Di Caprio, Rock, Brad Smith", moreLikeThisMovie: [], trailers: exampleTrailers)
 

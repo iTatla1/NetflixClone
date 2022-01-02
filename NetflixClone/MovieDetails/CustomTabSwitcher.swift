@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTab = .episodes
+    @Binding var showPicker: Bool
+    @Binding var currentSeason: Int
     
     var tabs: [CustomTab]
     var movie: Movie
     
+   
     var body: some View {
         VStack(alignment: .leading) {
             // Scrollable Custom Tab Picker
@@ -21,11 +24,13 @@ struct CustomTabSwitcher: View {
             // Selected View
             switch currentTab {
             case .episodes:
-                Text("Episodes")
+                EpisodesView(showSeasonPicker: $showPicker, currentSeason: $currentSeason, episodes: movie.episode ?? [])
             case .trailers:
                 TrailersMoreView(trailers: movie.trailers)
+
             case .more:
                 MoreLikeView(movies: movie.moreLikeThisMovie)
+
             }
         }
         .foregroundColor(.white)
@@ -44,7 +49,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
+            CustomTabSwitcher(showPicker: .constant(false), currentSeason: .constant(1), tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
         }
     }
 }
@@ -63,6 +68,7 @@ struct TabPicker: View {
                                 .frame(width: widthForTab(tab), height: 6)
                                 .foregroundColor(tab == currentTab ? .red: .clear)
                             Button {
+                                print("Tapped \(tab.rawValue)")
                                 currentTab = tab
                                 value.scrollTo(tab, anchor: .trailing)
                             } label: {

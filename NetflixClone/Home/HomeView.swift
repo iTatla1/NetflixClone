@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     var vm = HomeVM()
+    let screen = UIScreen.main.bounds
+    @State private var movieDetailsToShow: Movie? = nil
     
     var body: some View {
         ZStack{
@@ -20,8 +22,8 @@ struct HomeView: View {
                 // Main VStack
                 LazyVStack {
                     TopRowButtons()
-                    TopMoviePreview(movie: exampleMovie4)
-                        .frame(width: .infinity)
+                    TopMoviePreview(movie: exampleMovie4, movieDetailsToShow: $movieDetailsToShow)
+                        .frame(width: screen.size.width)
                         .padding(.top, -110)
                         .zIndex(-1)
                     
@@ -39,6 +41,9 @@ struct HomeView: View {
                                         StandardMovieView(movie: movie)
                                             .frame(width: 100, height: 200)
                                             .padding(.horizontal, 20)
+                                            .onTapGesture {
+                                                movieDetailsToShow = movie
+                                            }
                                     }
                                 }
                             }
@@ -46,6 +51,12 @@ struct HomeView: View {
                         .padding(.bottom, 16)
                     }
                 }
+            }
+            
+            if (movieDetailsToShow != nil) {
+                MovieDetails(movie: movieDetailsToShow!, movieDetailsToShow: $movieDetailsToShow )
+                    .animation(.easeIn)
+                    .transition(.opacity)
             }
         }
         .foregroundColor(.white)

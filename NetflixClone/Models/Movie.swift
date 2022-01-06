@@ -24,6 +24,8 @@ struct Movie: Identifiable {
     
     var promotionHeadLine: String?
     
+    var genere: HomeGenere = .AllGenere
+    
     var movieType: MovieType {
         if episode != nil {
             return .movie

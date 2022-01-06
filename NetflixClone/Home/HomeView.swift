@@ -35,7 +35,7 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    HomeStack(movieDetailsToShow: $movieDetailsToShow, typeRowSelection: topRowSelection, vm: vm)
+                    HomeStack(movieDetailsToShow: $movieDetailsToShow, typeRowSelection: topRowSelection, genere: homeGenere, vm: vm)
                 }
             }
             
@@ -43,6 +43,88 @@ struct HomeView: View {
                 MovieDetails(movie: movieDetailsToShow!, movieDetailsToShow: $movieDetailsToShow )
                     .animation(.easeIn)
                     .transition(.opacity)
+            }
+            
+            if showTopRowSelection {
+                Group {
+                    Color.black.opacity(0.9)
+                    VStack(spacing: 40){
+                        Spacer()
+                        ForEach(HomeTopRow.allCases, id: \.self) {topRow in
+                            Button {
+                                topRowSelection = topRow
+                                showTopRowSelection = false
+                            } label: {
+                                if topRow == topRowSelection {
+                                    Text(topRow.rawValue)
+                                        .bold()
+                                } else {
+                                    Text(topRow.rawValue)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+
+                        }
+                        
+                        Spacer()
+                        
+                        Button {
+                            showTopRowSelection = false
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 40))
+                        }
+                        .padding(.bottom, 30)
+
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
+                    
+            }
+            
+            if showGenereSelection {
+                Group {
+                    Color.black.opacity(0.9)
+                    VStack{
+                        Spacer()
+                        
+                        ScrollView {
+                            VStack(spacing: 40) {
+                                ForEach(vm.allGenre, id: \.self) {genere in
+                                    Button {
+                                        homeGenere = genere
+                                        showGenereSelection = false
+                                    } label: {
+                                        if genere == homeGenere {
+                                            Text(genere.rawValue)
+                                                .bold()
+                                        } else {
+                                            Text(genere.rawValue)
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                        .padding(.top, 50)
+                        
+                        Spacer()
+                        
+                        Button {
+                            showGenereSelection = false
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 40))
+                        }
+                        .padding(.bottom, 30)
+
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
+                    
             }
         }
         .foregroundColor(.white)
@@ -166,7 +248,7 @@ enum HomeTopRow: String, CaseIterable {
     case myList = "My List"
 }
 
-enum HomeGenere: String {
+enum HomeGenere: String, CaseIterable {
     case AllGenere
     case Action
     case Comedy

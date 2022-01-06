@@ -21,7 +21,7 @@ let exampleTrailer1 = Trailer(name: "Season1 Trailer", videoURL: exampleVideoURL
 let exampleTrailer2 = Trailer(name: "Season2 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL1)
 let exampleTrailer3 = Trailer(name: "Season3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL2)
 
-let exampleTrailers = [exampleTrailer1,exampleTrailer2,exampleTrailer3]
+let exampleTrailers: [Trailer] = [] //[exampleTrailer1,exampleTrailer2,exampleTrailer3]
 
 
 

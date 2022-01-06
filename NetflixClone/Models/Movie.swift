@@ -24,6 +24,13 @@ struct Movie: Identifiable {
     
     var promotionHeadLine: String?
     
+    var movieType: MovieType {
+        if episode != nil {
+            return .movie
+        }
+        return .tvShow
+    }
+    
     // Personalization
     var currentEpisode: CurrentEpisodeInfo?
     var defaultEpisodeInfo: CurrentEpisodeInfo
@@ -68,4 +75,9 @@ struct CurrentEpisodeInfo {
     let description: String
     let season: Int
     let episode: Int
+}
+
+enum MovieType {
+    case movie
+    case tvShow
 }

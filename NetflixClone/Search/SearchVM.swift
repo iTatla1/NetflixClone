@@ -45,14 +45,14 @@ class SearchVM: ObservableObject {
     
     private func getSearchResults(for text: String) {
         let haveResult = Int.random(in: 0...3)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if haveResult == 0{
                 self.searchMovie = []
-                self.viewState = .empty
+                self.setViewState(to: .empty)
             }
             else {
                 self.searchMovie = generateMovies(21)
-                self.viewState = .ready
+                self.setViewState(to: .ready)
             }
         }
     }

@@ -40,7 +40,15 @@ struct SearchView: View {
                     }
                     
                     else if vm.viewState == .ready && !vm.isShowingPopularMovie {
-                        Text("Search Result")
+                        VStack(alignment: .leading) {
+                            Text("Movies & TV")
+                                .font(.body)
+                                .bold()
+                                .padding(.leading, 8)
+                            
+                            SearchResultGrid(movies: vm.searchMovie, movieDetailsToShow: $movieDetailToShow)
+                            
+                        }
                     }
                 }
                 
@@ -74,7 +82,7 @@ struct PopularMoviesList: View {
                 .font(.body)
                 .bold()
                 .padding(.leading, 8)
-            ForEach(movies) { movie in
+            ForEach(movies, id: \.id) { movie in
                 
                 PopularMovieView(movie: movie, movieDetailToShow: $movieDetailToShow)
                     .frame(height: 75)

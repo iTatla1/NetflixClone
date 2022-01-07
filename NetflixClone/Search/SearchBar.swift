@@ -57,8 +57,10 @@ struct SearchBar: View {
                         }
                     }
                 }
+
             }
-            
+            .animation(.default)
+
             if isEditing {
                 Button {
                     text = ""
@@ -68,6 +70,9 @@ struct SearchBar: View {
                     Text("Cancel")
                         .foregroundColor(.white)
                 }
+                .transition(.move(edge: .trailing))
+                .animation(.default)
+
             }
         }
         .frame(height: 36)

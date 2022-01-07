@@ -8,7 +8,7 @@
 import Foundation
 
 struct Episode: Identifiable {
-    let id = UUID().uuidString
+    var id = UUID().uuidString
     let episodeNumber: Int
     let name: String
     let season: Int

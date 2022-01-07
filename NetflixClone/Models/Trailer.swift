@@ -8,7 +8,7 @@
 import Foundation
 
 struct Trailer: Identifiable, Hashable {
-    let id = UUID().uuidString
+    var id = UUID().uuidString
     let name: String
     let videoURL: URL
     let thumbnailImageURL: URL

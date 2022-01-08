@@ -26,6 +26,7 @@
 		B627BDDD2789798D00901BAB /* ComingSoonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627BDDC2789798D00901BAB /* ComingSoonRow.swift */; };
 		B627BDDF27897F5C00901BAB /* ComingSoonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627BDDE27897F5C00901BAB /* ComingSoonVM.swift */; };
 		B627BDE12789807000901BAB /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627BDE02789807000901BAB /* TrackableScrollView.swift */; };
+		B627BDE4278988E200901BAB /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627BDE3278988E200901BAB /* DownloadView.swift */; };
 		B651D26D2787F62B00E869AF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651D26C2787F62B00E869AF /* SearchBar.swift */; };
 		B651D26F2787F73B00E869AF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651D26E2787F73B00E869AF /* Colors.swift */; };
 		B651D2712787FEDF00E869AF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651D2702787FEDF00E869AF /* ActivityIndicator.swift */; };
@@ -69,6 +70,7 @@
 		B627BDDC2789798D00901BAB /* ComingSoonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonRow.swift; sourceTree = "<group>"; };
 		B627BDDE27897F5C00901BAB /* ComingSoonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonVM.swift; sourceTree = "<group>"; };
 		B627BDE02789807000901BAB /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
+		B627BDE3278988E200901BAB /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		B651D26C2787F62B00E869AF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B651D26E2787F73B00E869AF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B651D2702787FEDF00E869AF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		B6176D4B277B3A310047848B /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				B627BDE2278988D000901BAB /* DownloadView */,
 				B627BDD727896CA300901BAB /* ComingSoon */,
 				B651D26B2787F61900E869AF /* Search */,
 				B6699ABE2780119900B207F3 /* VideoView */,
@@ -221,6 +224,14 @@
 				B627BDE02789807000901BAB /* TrackableScrollView.swift */,
 			);
 			path = ComingSoon;
+			sourceTree = "<group>";
+		};
+		B627BDE2278988D000901BAB /* DownloadView */ = {
+			isa = PBXGroup;
+			children = (
+				B627BDE3278988E200901BAB /* DownloadView.swift */,
+			);
+			path = DownloadView;
 			sourceTree = "<group>";
 		};
 		B651D26B2787F61900E869AF /* Search */ = {
@@ -372,6 +383,7 @@
 			files = (
 				B621F2422788437900751191 /* PopularMovieView.swift in Sources */,
 				B627BDD927896CC800901BAB /* ComingSoonView.swift in Sources */,
+				B627BDE4278988E200901BAB /* DownloadView.swift in Sources */,
 				B6699AC627802A3400B207F3 /* EpisodesView.swift in Sources */,
 				B651D2752788251500E869AF /* SearchVM.swift in Sources */,
 				B627BDDB27896D0A00901BAB /* NotificationBar.swift in Sources */,

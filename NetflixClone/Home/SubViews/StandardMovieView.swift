@@ -25,6 +25,6 @@ struct StandardMovieView: View {
 struct StandardMovieView_Previews: PreviewProvider {
     static var previews: some View {
         StandardMovieView(movie: exampleMovie1)
-            .frame(width: 200, height: 300)
+            .frame(width: 300, height: 300)
     }
 }

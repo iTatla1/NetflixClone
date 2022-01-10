@@ -39,6 +39,8 @@
 		B6699AC2278013D400B207F3 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6699AC1278013D400B207F3 /* VideoPreviewImage.swift */; };
 		B6699AC42780152E00B207F3 /* TrailersMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6699AC32780152E00B207F3 /* TrailersMoreView.swift */; };
 		B6699AC627802A3400B207F3 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6699AC527802A3400B207F3 /* EpisodesView.swift */; };
+		B6923AF4278C33A6004C95E2 /* MoviePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923AF3278C33A6004C95E2 /* MoviePreviewCell.swift */; };
+		B6923AF6278C367E004C95E2 /* MoviePreviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923AF5278C367E004C95E2 /* MoviePreviewRow.swift */; };
 		B6A1452227884B0600C3E65D /* SearchResultGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1452127884B0600C3E65D /* SearchResultGrid.swift */; };
 		B6A883EC277D6E5600BD316D /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A883EB277D6E5600BD316D /* MovieDetails.swift */; };
 		B6A883EE277D730000BD316D /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A883ED277D72FF00BD316D /* Episode.swift */; };
@@ -83,6 +85,8 @@
 		B6699AC1278013D400B207F3 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
 		B6699AC32780152E00B207F3 /* TrailersMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailersMoreView.swift; sourceTree = "<group>"; };
 		B6699AC527802A3400B207F3 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		B6923AF3278C33A6004C95E2 /* MoviePreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreviewCell.swift; sourceTree = "<group>"; };
+		B6923AF5278C367E004C95E2 /* MoviePreviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreviewRow.swift; sourceTree = "<group>"; };
 		B6A1452127884B0600C3E65D /* SearchResultGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultGrid.swift; sourceTree = "<group>"; };
 		B6A883EB277D6E5600BD316D /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		B6A883ED277D72FF00BD316D /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		B6176D4B277B3A310047848B /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				B6923AF2278C3386004C95E2 /* Previews */,
 				B627BDE2278988D000901BAB /* DownloadView */,
 				B627BDD727896CA300901BAB /* ComingSoon */,
 				B651D26B2787F61900E869AF /* Search */,
@@ -252,6 +257,15 @@
 				B6699ABF278011AA00B207F3 /* SwiftUIVideoView.swift */,
 			);
 			path = VideoView;
+			sourceTree = "<group>";
+		};
+		B6923AF2278C3386004C95E2 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				B6923AF3278C33A6004C95E2 /* MoviePreviewCell.swift */,
+				B6923AF5278C367E004C95E2 /* MoviePreviewRow.swift */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		B6A883EA277D6E4200BD316D /* MovieDetails */ = {
@@ -388,8 +402,10 @@
 				B651D2752788251500E869AF /* SearchVM.swift in Sources */,
 				B627BDDB27896D0A00901BAB /* NotificationBar.swift in Sources */,
 				B651D26F2787F73B00E869AF /* Colors.swift in Sources */,
+				B6923AF4278C33A6004C95E2 /* MoviePreviewCell.swift in Sources */,
 				B6176D65277B55510047848B /* GlobalHelpers.swift in Sources */,
 				B6699ABD2780115800B207F3 /* Trailer.swift in Sources */,
+				B6923AF6278C367E004C95E2 /* MoviePreviewRow.swift in Sources */,
 				B651D273278824AC00E869AF /* SearchView.swift in Sources */,
 				B6A883EE277D730000BD316D /* Episode.swift in Sources */,
 				B6699AC42780152E00B207F3 /* TrailersMoreView.swift in Sources */,

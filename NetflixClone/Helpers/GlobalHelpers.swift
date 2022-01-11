@@ -56,7 +56,7 @@ let exampleMovie6 = Movie(id: UUID().uuidString, name: "Naruto", thumbnailURL: U
 let exampleMovie7 = exampleMovie6
 
 
-var exampleMovies: [Movie] { [exampleMovie1,exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6].shuffled() }
+var exampleMovies: [Movie] = [exampleMovie1,exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6]
 
 
 extension LinearGradient {
@@ -74,5 +74,16 @@ extension String {
 extension View {
     func hideKeyBoard () {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        }
+        else {
+            self
+        }
     }
 }

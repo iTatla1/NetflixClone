@@ -15,6 +15,8 @@ struct PreviewList: View {
     @State private var currentTraslation: CGFloat = .zero
     let screen = UIScreen.main.bounds
     
+    let externalDragGesture: _EndedGesture<_ChangedGesture<DragGesture>>
+    
     func shouldPlayVideo(_ index: Int) -> Bool {
         if !isVisible || index != currentSelection {
             return false
@@ -26,7 +28,7 @@ struct PreviewList: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            PagerView(pageCount: movies.count, currentIndex: $currentSelection, translation: $currentTraslation) {
+            PagerView(pageCount: movies.count, currentIndex: $currentSelection, translation: $currentTraslation, externalDragGesture: externalDragGesture) {
                 ForEach(0..<movies.count) {index in
                     let movie = movies[index]
                     PreviewView(vm: PreviewVM(movie: movie), playVideo: shouldPlayVideo(index))
@@ -39,17 +41,17 @@ struct PreviewList: View {
     }
 }
 
-struct ExamplePreviewList: View {
-    @State private var currentSelection: Int = 0
-    @State private var isVisible: Bool = true
-
-    var body: some View {
-        PreviewList(movies: exampleMovies, currentSelection: $currentSelection, isVisible: $isVisible)
-    }
-}
-
-struct PreviewList_Previews: PreviewProvider {
-    static var previews: some View {
-        ExamplePreviewList()
-    }
-}
+//struct ExamplePreviewList: View {
+//    @State private var currentSelection: Int = 0
+//    @State private var isVisible: Bool = true
+//
+//    var body: some View {
+//        PreviewList(movies: exampleMovies, currentSelection: $currentSelection, isVisible: $isVisible)
+//    }
+//}
+//
+//struct PreviewList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExamplePreviewList()
+//    }
+//}

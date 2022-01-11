@@ -46,6 +46,7 @@
 		B6923AFD278D8838004C95E2 /* TrailerPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923AFC278D8838004C95E2 /* TrailerPlayerView.swift */; };
 		B6923AFF278D89F2004C95E2 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923AFE278D89F2004C95E2 /* PreviewView.swift */; };
 		B6923B01278D8A0F004C95E2 /* PreviewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923B00278D8A0F004C95E2 /* PreviewVM.swift */; };
+		B6923B03278D91FF004C95E2 /* PreviewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6923B02278D91FF004C95E2 /* PreviewList.swift */; };
 		B6A1452227884B0600C3E65D /* SearchResultGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1452127884B0600C3E65D /* SearchResultGrid.swift */; };
 		B6A883EC277D6E5600BD316D /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A883EB277D6E5600BD316D /* MovieDetails.swift */; };
 		B6A883EE277D730000BD316D /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A883ED277D72FF00BD316D /* Episode.swift */; };
@@ -96,6 +97,7 @@
 		B6923AFC278D8838004C95E2 /* TrailerPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerPlayerView.swift; sourceTree = "<group>"; };
 		B6923AFE278D89F2004C95E2 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		B6923B00278D8A0F004C95E2 /* PreviewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVM.swift; sourceTree = "<group>"; };
+		B6923B02278D91FF004C95E2 /* PreviewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewList.swift; sourceTree = "<group>"; };
 		B6A1452127884B0600C3E65D /* SearchResultGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultGrid.swift; sourceTree = "<group>"; };
 		B6A883EB277D6E5600BD316D /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		B6A883ED277D72FF00BD316D /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				B6923AFC278D8838004C95E2 /* TrailerPlayerView.swift */,
 				B6923AFE278D89F2004C95E2 /* PreviewView.swift */,
 				B6923B00278D8A0F004C95E2 /* PreviewVM.swift */,
+				B6923B02278D91FF004C95E2 /* PreviewList.swift */,
 			);
 			path = Previews;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				B6176D69277B62A60047848B /* TopMoviePreview.swift in Sources */,
 				B627BDDD2789798D00901BAB /* ComingSoonRow.swift in Sources */,
 				B6D48DB0277F658F0056AC60 /* CustomTabSwitcher.swift in Sources */,
+				B6923B03278D91FF004C95E2 /* PreviewList.swift in Sources */,
 				B651D2772788277500E869AF /* GenerateMovie.swift in Sources */,
 				B6176D62277B55090047848B /* StandardMovieView.swift in Sources */,
 				B6176D4D277B3A310047848B /* NetflixCloneApp.swift in Sources */,

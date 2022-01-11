@@ -12,6 +12,7 @@ struct SmallVerticalButton: View {
     let isOnImage: String
     let isOffImage: String
     var isOn: Bool
+    var color: Color? = .white
     
     let action: () -> Void
 
@@ -30,7 +31,7 @@ struct SmallVerticalButton: View {
                     .bold()
                     .padding(.vertical, 6)
             }
-            .foregroundColor(.white)
+            .foregroundColor(color)
         }
 
     }
